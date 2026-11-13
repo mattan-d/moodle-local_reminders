@@ -353,4 +353,14 @@ if ($hassiteconfig) {
     $settings->add(new admin_setting_configcheckbox('local_reminders_enable_categoryforcalevents',
             get_string('enabledforcalevents', 'local_reminders'),
             get_string('enabledforcaleventsdescription', 'local_reminders'), 0));
+
+    // ASSIGNMENT COMMENT AND FEEDBACK NOTIFICATIONS.
+
+    $settings->add(new admin_setting_heading('local_reminders_assign_heading',
+            get_string('assignheading', 'local_reminders'),
+            get_string('assignheadingdesc', 'local_reminders')));
+
+    $settings->add(new admin_setting_configcheckbox('local_reminders_assigncommentnotify',
+            get_string('assigncommentnotify', 'local_reminders'),
+            get_string('assigncommentnotifydesc', 'local_reminders'), 0));
 }

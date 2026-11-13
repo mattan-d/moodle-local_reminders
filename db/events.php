@@ -36,4 +36,16 @@ $observers = [
         'eventname' => '\core\event\calendar_event_deleted',
         'callback' => '\local_reminders\calendar_observer::calendar_event_removed',
     ],
+    [
+        'eventname' => '\mod_assign\event\assessable_submitted',
+        'callback' => '\local_reminders\assign_observer::assessable_submitted',
+    ],
+    [
+        'eventname' => '\assignsubmission_comments\event\comment_created',
+        'callback' => '\local_reminders\assign_observer::submission_comment_created',
+    ],
+    [
+        'eventname' => '\mod_assign\event\submission_graded',
+        'callback' => '\local_reminders\assign_observer::submission_graded',
+    ],
 ];

@@ -116,7 +116,11 @@ $string['moodlecalendarname'] = 'Moodle Calendar';
 $string['overduemessage'] = 'This activity is overdue!';
 $string['plugindisabled'] = 'The plugin is disabled by admin.';
 $string['pluginname'] = 'Event Reminders';
-$string['privacy:metadata'] = 'The Event Reminders plugin does not store any personal data.';
+$string['privacy:metadata'] = 'The Event Reminders plugin stores a hash of assignment feedback that was already emailed, so the same feedback is not sent again.';
+$string['privacy:metadata:local_reminders_assignnote'] = 'Records which assignment feedback text has already been emailed.';
+$string['privacy:metadata:local_reminders_assignnote:gradeid'] = 'The assignment grade this notification state belongs to.';
+$string['privacy:metadata:local_reminders_assignnote:contenthash'] = 'A hash of the feedback text that was emailed.';
+$string['privacy:metadata:local_reminders_assignnote:timemodified'] = 'When this notification state was last updated.';
 $string['overdueactivityreminders'] = 'Activity Overdue Reminders:';
 $string['overdueactivityremindersdescription'] = 'If checked, then reminders will be sent to users who are overdue the activity.';
 $string['overduewarnmessage'] = 'Overdue Warn Message:';
@@ -145,3 +149,60 @@ $string['taskreminder'] = 'Reminders Task';
 $string['titlesubjectprefix'] = 'Reminder';
 $string['userheading'] = 'User Event Reminders';
 $string['useservertimezone'] = "Use Server Timezone";
+$string['assignheading'] = 'Assignment notifications';
+$string['assignheadingdesc'] = 'Email the other party when an assignment is submitted, or when a submission comment or feedback comment is added.';
+$string['assigncommentnotify'] = 'Email when an assignment comment is received';
+$string['assigncommentnotifydesc'] = 'If enabled, a student submission or submission comment emails the graders. A grader comment or feedback comment emails the student. The submission itself is not emailed again when that assignment already notifies graders. Feedback is emailed only when its text changes, and only after marking workflow is released.';
+$string['messageprovider:reminders_assigncomment'] = 'Notifications for assignment submissions, comments, and feedback';
+$string['assignmailsubmittedsubject'] = 'New assignment submission: {$a->assignment}';
+$string['assignmailsubmittedbody'] = '{$a->user} submitted the assignment "{$a->assignment}" in the course "{$a->course}".
+
+View the assignment:
+{$a->url}';
+$string['assignmailsubmittedanonsubject'] = 'New assignment submission: {$a->assignment}';
+$string['assignmailsubmittedanonbody'] = 'The assignment "{$a->assignment}" was submitted in the course "{$a->course}".
+
+View the assignment:
+{$a->url}';
+$string['assignmailstudentsubject'] = 'New comment on assignment: {$a->assignment}';
+$string['assignmailstudentbody'] = '{$a->user} left a comment on the assignment "{$a->assignment}" in the course "{$a->course}":
+
+{$a->comment}
+
+View the assignment:
+{$a->url}';
+$string['assignmailstudentanonsubject'] = 'New comment on assignment: {$a->assignment}';
+$string['assignmailstudentanonbody'] = 'A comment was added on the assignment "{$a->assignment}" in the course "{$a->course}":
+
+{$a->comment}
+
+View the assignment:
+{$a->url}';
+$string['assignmailteachersubject'] = 'New comment on your assignment: {$a->assignment}';
+$string['assignmailteacherbody'] = '{$a->user} left a comment on your submission for "{$a->assignment}" in the course "{$a->course}":
+
+{$a->comment}
+
+View the assignment:
+{$a->url}';
+$string['assignmailteacheranonsubject'] = 'New comment on your assignment: {$a->assignment}';
+$string['assignmailteacheranonbody'] = 'A comment was added on your submission for "{$a->assignment}" in the course "{$a->course}":
+
+{$a->comment}
+
+View the assignment:
+{$a->url}';
+$string['assignmailfeedbacksubject'] = 'New feedback on your assignment: {$a->assignment}';
+$string['assignmailfeedbackbody'] = '{$a->user} posted feedback on your assignment "{$a->assignment}" in the course "{$a->course}":
+
+{$a->comment}
+
+View the assignment:
+{$a->url}';
+$string['assignmailfeedbackanonsubject'] = 'New feedback on your assignment: {$a->assignment}';
+$string['assignmailfeedbackanonbody'] = 'Feedback was posted on your assignment "{$a->assignment}" in the course "{$a->course}":
+
+{$a->comment}
+
+View the assignment:
+{$a->url}';

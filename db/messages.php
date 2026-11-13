@@ -44,4 +44,12 @@ $messageproviders = [
     // Reminders for due events.
     'reminders_due' => [],
 
+    // Email when an assignment is submitted or a comment / feedback is added.
+    'reminders_assigncomment' => [
+        'defaults' => [
+            'popup' => MESSAGE_PERMITTED + MESSAGE_DEFAULT_ENABLED,
+            'email' => MESSAGE_PERMITTED + MESSAGE_DEFAULT_ENABLED,
+        ],
+    ],
+
 ];
